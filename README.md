@@ -57,11 +57,11 @@ The paddle moves accordingly.
 
 Clone the repository
 
-git clone https://github.com/saur4bbh/AI-Opponent-PongGame-Fuzzy-Logic-
+git clone https://github.com/saur4bbh/AI-Opponent-PongGame---Fuzzy-Logic-
 
 Navigate into the directory
 
-cd AI-Opponent-PongGame-Fuzzy-Logic-
+cd AI-Opponent-PongGame---Fuzzy-Logic-
 
 Install dependencies
 
