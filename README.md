@@ -2,56 +2,81 @@
 
 📌 Overview
 
-This project implements an intelligent AI opponent for the classic Pong game using Fuzzy Logic Control Systems. The AI paddle movement is controlled using two different fuzzy inference approaches:
+This project implements an intelligent AI opponent for the classic Pong game using Fuzzy Logic Control Systems.
+
+The AI paddle movement is controlled using two different fuzzy inference approaches:
 
 Mamdani Fuzzy Inference System
 Takagi–Sugeno–Kang (TSK) Fuzzy Model
 
-The objective is to demonstrate how fuzzy logic can be applied to real-time decision-making in dynamic game environments and simulate human-like reasoning under uncertainty.
+The objective of this project is to demonstrate how fuzzy logic can be applied to real-time decision-making in dynamic game environments and simulate human-like reasoning under uncertainty.
 
 🧠 Fuzzy Logic Approach
 
 1️⃣ Mamdani Model
 
-Uses linguistic variables (e.g., Near, Far, Fast, Slow).
-Based on IF–THEN fuzzy rules.
-Applies fuzzification → rule evaluation → aggregation → defuzzification.
-Produces smooth and interpretable paddle movement.
+Uses linguistic variables such as Near, Far, Fast, and Slow.
 
-Example Rule:
-IF Ball_Distance is Near AND Ball_Speed is Fast  
+It is based on IF–THEN fuzzy rules.
+
+The system applies:
+Fuzzification
+Rule evaluation
+Aggregation
+Defuzzification
+
+It produces smooth and interpretable paddle movement.
+
+Example Rule
+
+IF Ball_Distance is Near AND Ball_Speed is Fast
 THEN Paddle_Move is Up
 
 2️⃣ Takagi–Sugeno–Kang (TSK) Model
 
-Uses fuzzy inputs but mathematical functions as outputs.
-Outputs are weighted linear functions.
-Faster computation compared to Mamdani.
-More suitable for real-time systems.
+This model uses fuzzy inputs but mathematical functions as outputs.
 
-Example Rule:
-IF Ball_Distance is Near AND Ball_Speed is Fast  
+The outputs are weighted linear functions.
+
+It is computationally faster than Mamdani and more suitable for real-time systems.
+
+Example Rule
+
+IF Ball_Distance is Near AND Ball_Speed is Fast
 THEN Paddle_Move = a*(Distance) + b*(Speed) + c
 
 🕹 Gameplay Logic
 
 The game continuously tracks ball position and velocity every frame.
-Inputs (Ball's position and Paddle's position) are fed into the fuzzy controller.
+Ball and paddle positions are fed into the fuzzy controller.
 Fuzzy inference is performed (Mamdani or TSK).
-A crisp output is generated (AI Paddle's direction and speed)
+A crisp output is generated representing AI paddle direction and speed.
 The paddle moves accordingly.
 
 🚀 How to Run
 
-Clone the repository: https://github.com/saur4bbh/AI-Opponent-PongGame-Fuzzy-Logic-
+Clone the repository
 
-Navigate into the project directory
+git clone https://github.com/saur4bbh/AI-Opponent-PongGame-Fuzzy-Logic-
 
-Run the main file:
-python main.py (make sure requirement libraries installment is satisfied)
+Navigate into the directory
+
+cd AI-Opponent-PongGame-Fuzzy-Logic-
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Run the game
+
+python main.py
 
 🔮 Future Improvements
 
 Adaptive rule tuning
+
 Neuro-fuzzy (ANFIS) integration
+
 Performance benchmarking metrics
+
+Difficulty scaling mechanism
